@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartel de Liderazgo Horizontal - Jesús Eduardo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial Black', Impact, sans-serif;
+            background-color: #050505;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #cartel {
+            background: linear-gradient(145deg, #1a0000 0%, #000000 100%);
+            width: 1050px; /* Optimizado para ancho carta horizontal */
+            height: 750px;
+            padding: 30px;
+            border: 6px solid #8a0303;
+            box-shadow: 0 0 40px #ff000050;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ff1a1a;
+            font-size: 2.8em;
+            margin: 0;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 10px #8a0303;
+        }
+
+        h2 {
+            color: #aaa;
+            font-size: 1.4em;
+            margin: 5px 0 20px 0;
+        }
+
+        /* Layout en columnas */
+        .contenido-horizontal {
+            display: flex;
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        .columna {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .seccion {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #330000;
+        }
+
+        .titulo-seccion {
+            background-color: #660000;
+            color: #ffffff;
+            padding: 8px 12px;
+            border-left: 6px solid #ff1a1a;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p, li {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.95em;
+            line-height: 1.4;
+            margin: 5px 0;
+        }
+
+        .resalte { color: #ff6666; font-weight: bold; }
+
+        /* Cuadro de teorías reducido para el grid */
+        .grid-teorias {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .mini-caja {
+            background: #220000;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #440000;
+        }
+
+        .mini-caja h4 {
+            margin: 0;
+            color: #ff4d4d;
+            font-size: 0.9em;
+        }
+
+        .mini-caja p { font-size: 0.8em; color: #ccc; }
+
+        /* Footer */
+        .footer-datos {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #330000;
+            border-radius: 8px;
+            font-size: 0.9em;
+            border: 1px dashed #ff1a1a;
+        }
+
+        #btn-descargar {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            color: white;
+            background: #8a0303;
+            border: 2px solid white;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #btn-descargar:hover { background: #ff0000; transform: scale(1.05); }
+
+    </style>
+</head>
+<body>
+
+    <div id="cartel">
+        <header>
+            <h1>FUNDAMENTOS Y ESTRATEGIA DE LIDERAZGO</h1>
+            <h2>Desarrollo de Software Multiplataforma</h2>
+        </header>
+
+        <div class="contenido-horizontal">
+            <div class="columna">
+                <div class="seccion">
+                    <div class="titulo-seccion">Líder vs. Liderazgo</div>
+                    <p><span class="resalte">El Líder:</span> Persona que influye e inspira al equipo.</p>
+                    <p><span class="resalte">El Liderazgo:</span> El proceso estratégico para alcanzar metas con eficacia.</p>
+                </div>
+
+                <div class="seccion">
+                    <div class="titulo-seccion">Mi Estrategia Personal</div>
+                    <ul>
+                        <li><span class="resalte">Visión:</span> Alineación tech iOS/Android.</li>
+                        <li><span class="resalte">Comunicación:</span> Feedback vía Slack/Jira.</li>
+                        <li><span class="resalte">Empatía:</span> Prevención de Burnout.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div class="seccion">
+                    <div class="titulo-seccion">Teorías del Liderazgo</div>
+                    <div class="grid-teorias">
+                        <div class="mini-caja">
+                            <h4>Rasgos</h4>
+                            <p>Líderes natos por herencia.</p>
+                        </div>
+                        <div class="mini-caja">
+                            <h4>Conductual</h4>
+                            <p>El líder se hace por acciones.</p>
+                        </div>
+                        <div class="mini-caja">
+                            <h4>Situacional</h4>
+                            <p>Adaptación según el entorno.</p>
+                        </div>
+                        <div class="mini-caja">
+                            <h4>Integrador</h4>
+                            <p>Gestión operativa y visión.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div class="seccion">
+                    <div class="titulo-seccion">Aplicación en Software</div>
+                    <p><strong>Transformacional:</strong> Ideal para Scrum/Agile.</p>
+                    <p><strong>Laissez Faire:</strong> Para devs Senior autónomos.</p>
+                    <p><strong>Transaccional:</strong> Enfoque en metas de Sprint.</p>
+                    <p><strong>Autocrático:</strong> Solo en caídas de servidor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-datos">
+            <div><strong>Alumno:</strong> Jesús Eduardo Rodríguez S.</div>
+            <div><strong>Docente:</strong> Leonardo Peña H.</div>
+            <div><strong>Grupo:</strong> DSM 51 | 25/03/2026</div>
+        </div>
+    </div>
+
+    <button id="btn-descargar" onclick="generarPDF()">📥 Descargar en PDF Horizontal</button>
+
+    <script>
+        function generarPDF() {
+            const elemento = document.getElementById('cartel');
+            const boton = document.getElementById('btn-descargar');
+            boton.innerText = "⏳ Preparando...";
+
+            const opciones = {
+                margin: 0,
+                filename: 'Cartel_Liderazgo_Horizontal_Jesus.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, backgroundColor: '#000000' },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' } // ¡Aquí está la magia!
+            };
+
+            html2pdf().set(opciones).from(elemento).save().then(() => {
+                boton.innerText = "📥 Descargar en PDF Horizontal";
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+realizar el archivo registro-universidad el cual solicite al usuario su edad, segun mi criterio de programador, valide los datos e informe si el usuario es apto para registrarse. lo anterior informelo en el archivo registro-validacion.jsp

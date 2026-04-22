@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Mis Datos</title>
+    <style>
+        :root{
+            --bg:#f3f7fb;
+            --card:#ffffff;
+            --accent:#2b7aef;
+            --muted:#6b7280;
+            --radius:10px;
+        }
+        html,body{height:100%;}
+        body{
+            margin:0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            background: linear-gradient(180deg,#eaf2ff 0%, var(--bg) 100%);
+            color:#111827;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:24px;
+        }
+        .card{
+            width:100%;
+            max-width:720px;
+            background:var(--card);
+            border-radius:var(--radius);
+            box-shadow:0 8px 24px rgba(43,122,239,0.08);
+            padding:20px 24px;
+        }
+        h1{
+            margin:0 0 12px 0;
+            font-size:1.4rem;
+            color:var(--accent);
+        }
+        p.lead{margin:0 0 18px 0;color:var(--muted);font-size:0.95rem}
+        form{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;}
+        .field{display:flex;flex-direction:column}
+        label{font-size:0.9rem;margin-bottom:6px;color:#374151}
+        input[type="text"],input[type="email"],input[type="password"],input[type="number"],input[type="date"],input[type="tel"],select,input[type="file"]{
+            padding:10px 12px;border:1px solid #e5e7eb;border-radius:8px;font-size:0.95rem;outline:none;
+        }
+        input[type="color"]{height:38px;width:48px;padding:4px;border-radius:6px;border:1px solid #e5e7eb}
+        input:focus{box-shadow:0 0 0 4px rgba(43,122,239,0.08);border-color:var(--accent)}
+        .full{grid-column:1 / -1}
+        .checkboxes{display:flex;flex-wrap:wrap;gap:8px}
+        .checkboxes label{display:flex;align-items:center;gap:8px}
+        .actions{display:flex;gap:12px;justify-content:flex-end;margin-top:6px}
+        button{padding:10px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+        .btn-primary{background:var(--accent);color:white}
+        .btn-secondary{background:#eef2ff;color:var(--accent)}
+        a.return{display:inline-block;margin-top:12px;color:var(--muted);text-decoration:none}
+        @media (max-width:540px){
+            form{grid-template-columns:1fr}
+            .actions{justify-content:stretch}
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Formulario — Mis Datos</h1>
+        <p class="lead">Llena tus datos básicos. Mantén el formulario simple y claro.</p>
+
+        <form>
+            <div class="field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" placeholder="Juan" required>
+            </div>
+
+            <div class="field">
+                <label for="apellido_paterno">Apellido Paterno</label>
+                <input id="apellido_paterno" name="apellido_paterno" type="text" placeholder="Pérez" required>
+            </div>
+
+            <div class="field">
+                <label for="apellido_materno">Apellido Materno</label>
+                <input id="apellido_materno" name="apellido_materno" type="text" placeholder="García">
+            </div>
+
+            <div class="field">
+                <label for="edad">Edad</label>
+                <input id="edad" name="edad" type="number" min="0" max="120" placeholder="30">
+            </div>
+
+            <div class="field full">
+                <label for="correo_electronico">Correo Electrónico</label>
+                <input id="correo_electronico" name="correo_electronico" type="email" placeholder="correo@ejemplo.com">
+            </div>
+
+            <div class="field">
+                <label for="contrasena">Contraseña</label>
+                <input id="contrasena" name="contrasena" type="password" placeholder="••••••">
+            </div>
+
+            <div class="field">
+                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                <input id="fecha_nacimiento" name="fecha_nacimiento" type="date">
+            </div>
+
+            <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" placeholder="123-456-7890">
+            </div>
+
+            <div class="field">
+                <label for="color_favorito">Color Favorito</label>
+                <input id="color_favorito" name="color_favorito" type="color" value="#2b7aef">
+            </div>
+
+            <div class="field">
+                <label for="foto">Sube tu foto</label>
+                <input id="foto" name="foto" type="file" accept="image/*">
+            </div>
+
+            <div class="field full">
+                <label>Haga uso de:</label>
+                <div class="checkboxes">
+                    <label><input type="checkbox" name="uso" value="computadora"> Computadora</label>
+                    <label><input type="checkbox" name="uso" value="celular"> Celular</label>
+                    <label><input type="checkbox" name="uso" value="tablet"> Tablet</label>
+                </div>
+            </div>
+
+            <div class="field full actions">
+                <button type="reset" class="btn-secondary">Borrar</button>
+                <button type="submit" class="btn-primary">Guardar</button>
+            </div>
+        </form>
+        <center>
+        <a class="return" href="index_u2.html">Regresar Unidad 2</a></center>
+    </div>
+</body>
+</html>

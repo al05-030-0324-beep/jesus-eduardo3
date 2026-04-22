@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Formulario - Kinder</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:20px;background:#f7f7f7}
+    form{background:#fff;padding:20px;border-radius:6px;max-width:600px;margin:auto;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+    label{display:block;margin-top:10px;font-weight:600}
+    input,select,textarea{width:100%;padding:8px;margin-top:4px;border:1px solid #ccc;border-radius:4px}
+    button{margin-top:14px;padding:10px 16px;border:none;background:#007bff;color:#fff;border-radius:4px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center">Registro - Kinder</h2>
+  <form action="#" method="post">
+    <label for="nombre">Nombre del infante</label>
+    <input id="nombre" name="nombre" type="text" required minlength="2" maxlength="80" placeholder="Nombre completo">
+
+    <label for="edad">Edad (años)</label>
+    <input id="edad" name="edad" type="number" required min="3" max="6" placeholder="3 - 6">
+
+    <label for="fecha_nac">Fecha de nacimiento</label>
+    <input id="fecha_nac" name="fecha_nac" type="date" required>
+
+    <label for="padre">Nombre del padre</label>
+    <input id="padre" name="padre" type="text" required minlength="2" maxlength="80">
+
+    <label for="madre">Nombre de la madre</label>
+    <input id="madre" name="madre" type="text" required minlength="2" maxlength="80">
+
+    <label for="domicilio">Domicilio</label>
+    <textarea id="domicilio" name="domicilio" rows="2" required minlength="5"></textarea>
+
+    <label for="telefono">Teléfono</label>
+    <input id="telefono" name="telefono" type="tel" required pattern="[0-9]{10}" placeholder="10 dígitos sin espacios">
+
+    <label for="correo">Correo electrónico</label>
+    <input id="correo" name="correo" type="email" required placeholder="nombre@ejemplo.com">
+
+    <label for="municipio">Municipio (Nayarit)</label>
+    <select id="municipio" name="municipio" required>
+      <option value="">-- Selecciona --</option>
+      <option>Acaponeta</option>
+      <option>Ahuacatlán</option>
+      <option>Amatlán de Cañas</option>
+      <option>Bahía de Banderas</option>
+      <option>Compostela</option>
+      <option>El Nayar</option>
+      <option>Huajicori</option>
+      <option>Ixtlán del Río</option>
+      <option>Jala</option>
+      <option>La Yesca</option>
+      <option>Rosamorada</option>
+      <option>Ruiz</option>
+      <option>San Blas</option>
+      <option>San Pedro Lagunillas</option>
+      <option>Santa María del Oro</option>
+      <option>Santiago Ixcuintla</option>
+      <option>Tecuala</option>
+      <option>Tepic</option>
+      <option>Tuxpan</option>
+      <option>Xalisco</option>
+    </select>
+
+    <button type="submit">Registrar</button>
+    <p style="text-align:center;margin-top:12px"><a href="index_u2.html">← Volver a Unidad 2</a></p>
+  </form>
+</body>
+</html>

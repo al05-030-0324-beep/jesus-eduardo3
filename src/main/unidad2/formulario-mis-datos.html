@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Mis Datos</title>
+    <style>
+        table, td {
+            font-family: verdana;
+            border: 3px solid black;
+            border-collapse: collapse;
+            color: blue;
+        }
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+        h3 {
+            font-family: Courier;
+            color: red;
+            font-size: 200%;
+        }
+        body {
+            background-color: powderblue;
+        }
+        .botones-container {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h3>Registra tus datos</h3>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" name="nom" required="true" maxlength="40"></td>
+                </tr>
+                <tr>
+                    <td>Edad:</td>
+                    <td><input type="number" name="eda" min="18" max="99" required="true"></td>
+                </tr>
+                <tr>
+                    <td>Correo:</td>
+                    <td><input type="email" name="ema" required="true"></td>
+                </tr>
+                <tr>
+                    <td>Contraseña:</td>
+                    <td><input type="password" name="contr" required="true"></td>
+                </tr>
+                <tr>
+                    <td>Fecha de Nacimiento:</td>
+                    <td><input type="date" name="nac" required="true"></td>
+                </tr>
+                <tr>
+                    <td>Telefono (123-123-1234):</td>
+                    <td><input type="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>  
+                </tr>
+                <tr>
+                    <td>Color favorito:</td>
+                    <td><input type="color" name="col"></td>
+                </tr>
+                <tr>
+                    <td>Sube tu foto:</td>
+                    <td><input type="file" name="foto"></td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Hago uso de:</td>
+                    <td><input type="checkbox" name="uso1" value="computadora">Computadora</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="uso2" value="tablet">Tablet</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="uso3" value="celular">Celular</td>
+                </tr>
+            </table>
+
+            <div class="botones-container">
+                <input type="submit" value="Guardar">
+                <input type="reset" value="Borrar">
+            </div>
+        </form>
+    </center>
+</body>
+</html>

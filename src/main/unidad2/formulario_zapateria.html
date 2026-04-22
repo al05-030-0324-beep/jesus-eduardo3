@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Formulario - Zapatería</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:20px;background:#f8f9fb}
+    form{background:#fff;padding:20px;border-radius:6px;max-width:520px;margin:auto;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+    label{display:block;margin-top:10px;font-weight:600}
+    input,select{width:100%;padding:8px;margin-top:4px;border:1px solid #ccc;border-radius:4px}
+    button{margin-top:14px;padding:10px 16px;border:none;background:#343a40;color:#fff;border-radius:4px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center">Registro de calzado - Zapatería</h2>
+  <form action="#" method="post">
+    <label for="modelo">Modelo / Nombre</label>
+    <input id="modelo" name="modelo" type="text" required>
+
+    <label for="precio">Precio (MXN)</label>
+    <input id="precio" name="precio" type="number" required min="100" max="1000" step="0.01">
+
+    <label for="color">Color</label>
+    <select id="color" name="color" required>
+      <option value="">-- Selecciona --</option>
+      <option>Negro</option>
+      <option>Canela</option>
+    </select>
+
+    <label for="talla">Talla (sin medios, entero)</label>
+    <input id="talla" name="talla" type="number" required step="1" min="15" max="50" placeholder="Ejemplo: 9">
+
+    <label for="unidades">Unidades en inventario</label>
+    <input id="unidades" name="unidades" type="number" required min="0" step="1">
+
+    <button type="submit">Registrar calzado</button>
+    <p style="text-align:center;margin-top:12px"><a href="index_u2.html">← Volver a Unidad 2</a></p>
+  </form>
+</body>
+</html>

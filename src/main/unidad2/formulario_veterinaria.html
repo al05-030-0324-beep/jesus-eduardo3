@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Formulario - Veterinaria</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:20px;background:#fffef8}
+    form{background:#fff;padding:20px;border-radius:6px;max-width:640px;margin:auto;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+    label{display:block;margin-top:10px;font-weight:600}
+    input,select,textarea{width:100%;padding:8px;margin-top:4px;border:1px solid #ccc;border-radius:4px}
+    button{margin-top:14px;padding:10px 16px;border:none;background:#ff6f00;color:#fff;border-radius:4px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center">Registro de mascota - Veterinaria</h2>
+  <form action="#" method="post">
+    <label for="nombre">Nombre de la mascota</label>
+    <input id="nombre" name="nombre" type="text" required minlength="1" maxlength="80">
+
+    <label for="edad">Edad (años)</label>
+    <input id="edad" name="edad" type="number" required min="0" step="1">
+
+    <label for="fecha_nac">Fecha de nacimiento</label>
+    <input id="fecha_nac" name="fecha_nac" type="date" required>
+
+    <label for="especie">Especie</label>
+    <input id="especie" name="especie" type="text" required>
+
+    <label for="raza">Raza</label>
+    <input id="raza" name="raza" type="text" required>
+
+    <label for="peso">Peso (kg)</label>
+    <input id="peso" name="peso" type="number" required min="0.1" step="0.1">
+
+    <label for="estatura">Estatura (cm)</label>
+    <input id="estatura" name="estatura" type="number" required min="1" step="0.1">
+
+    <label for="propietario">Propietario</label>
+    <input id="propietario" name="propietario" type="text" required>
+
+    <label for="telefono">Teléfono</label>
+    <input id="telefono" name="telefono" type="tel" required pattern="[0-9]{10}" placeholder="10 dígitos">
+
+    <label for="direccion">Dirección</label>
+    <textarea id="direccion" name="direccion" rows="2" required></textarea>
+
+    <button type="submit">Registrar mascota</button>
+    <p style="text-align:center;margin-top:12px"><a href="index_u2.html">← Volver a Unidad 2</a></p>
+  </form>
+</body>
+</html>

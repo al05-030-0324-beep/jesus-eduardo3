@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Formulario - Biblioteca</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:20px;background:#f4f7fb}
+    form{background:#fff;padding:20px;border-radius:6px;max-width:700px;margin:auto;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+    label{display:block;margin-top:10px;font-weight:600}
+    input,select,textarea{width:100%;padding:8px;margin-top:4px;border:1px solid #ccc;border-radius:4px}
+    button{margin-top:14px;padding:10px 16px;border:none;background:#28a745;color:#fff;border-radius:4px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center">Registro de libros - Biblioteca</h2>
+  <form action="#" method="post">
+    <label for="titulo">Nombre / Título</label>
+    <input id="titulo" name="titulo" type="text" required minlength="1" maxlength="200">
+
+    <label for="autor">Autor(es)</label>
+    <input id="autor" name="autor" type="text" required placeholder="Autor o lista de autores">
+
+    <label for="editorial">Editorial</label>
+    <input id="editorial" name="editorial" type="text" required>
+
+    <label for="anio">Año de publicación</label>
+    <input id="anio" name="anio" type="number" required min="2021" max="2026">
+
+    <label for="pais">País</label>
+    <select id="pais" name="pais" required>
+      <option value="">-- Selecciona --</option>
+      <option>Mexico</option>
+      <option>España</option>
+      <option>Cuba</option>
+    </select>
+
+    <label for="paginas">Páginas</label>
+    <input id="paginas" name="paginas" type="number" required min="1">
+
+    <label for="precio">Precio (MXN)</label>
+    <input id="precio" name="precio" type="number" required min="100" step="0.01">
+
+    <label for="edicion">Edición</label>
+    <input id="edicion" name="edicion" type="text" required>
+
+    <label for="isbn">ISBN (10 o 13 dígitos, puede incluir guiones)</label>
+    <input id="isbn" name="isbn" type="text" required pattern="^(?:\d{10}|\d{13}|[0-9\-]{10,17})$" placeholder="Ej: 9783161484100 o 0-306-40615-2">
+
+    <button type="submit">Registrar libro</button>
+    <p style="text-align:center;margin-top:12px"><a href="index_u2.html">← Volver a Unidad 2</a></p>
+  </form>
+</body>
+</html>
