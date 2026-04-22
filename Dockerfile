@@ -1,10 +1,10 @@
-# Paso 1: Compilar
-FROM maven:3.8.5-openjdk-8 AS build
+# Paso 1: Compilar usando Amazon Corretto 8
+FROM maven:3.8.6-amazoncorretto-8 AS build
 COPY . .
 RUN mvn clean package
 
-# Paso 2: Ejecutar (Usaremos una imagen más común)
-FROM openjdk:8-jdk-alpine
+# Paso 2: Ejecutar usando Amazon Corretto 8 (esta no falla)
+FROM amazoncorretto:8-alpine-jre
 COPY --from=build /target/dependency/webapp-runner.jar webapp-runner.jar
 COPY --from=build /target/*.war app.war
 
